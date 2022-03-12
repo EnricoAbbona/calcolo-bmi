@@ -1,0 +1,93 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    background: rgb(111,3,164);
+    background: linear-gradient(90deg, rgba(111,3,164,1) 0%, rgba(109,27,153,1) 45%, rgba(95,16,245,1) 100%);
+}
+
+h1 {
+    font-size: 37px;
+    text-align: center;
+}
+
+.contenuto {
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    background-color: white;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+form{
+    width: 80%;
+    margin: auto;
+}
+
+label {
+    font-size: 21.5px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+table{
+    width: 80%;
+    margin: auto;
+}
+
+tr{
+    margin: 30px;
+}
+
+td{
+    width: auto;
+    text-align: center;
+}
+
+.etichetta{
+    text-align: left;
+    width: 50%;
+}
+
+.inserimento{
+    text-align: left;
+}
+
+input[type=text]
+{
+        border: 1px solid #e6e8ed;
+        background-color: #c3c6c9b4;
+        min-width: 80px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 3px;
+        color: #232425;
+        font-family: "Barlow",Arial,sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 30px;
+        padding: 0px;
+        width: 100%;
+        vertical-align:baseline;
+
+    }
+
+:focus{
+    outline: 0;
+}
+
+
+input[type=button] {
+    border-radius: 20px;
+    border: 2px  solid #f64f64;
+    background-color: #f64f64;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px;
+    padding:10px 20px 10px 20px;
+}
