@@ -7,48 +7,120 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="resources/balance.ico">
         <!-- SCRIPT -->
         <script src="js/script.js"></script>
+        <script src="js/progress-bar.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
+
 <body>
-    <div class="contenuto">
-        <h1>Calcolatore BMI</h1>
-        <form name="bmi">
-        <table>
-            <tr>
-                <td class="etichetta">
-                <label>Peso individuo (Kg)</label>
-                </td>
-                <td class="inserimento">
-                <input type="text" id="peso" placeholder="0">
-                </td>
-    
-            </tr>
-            <tr>
-                <td class="etichetta">
-                <label>Altezza (Cm)</label>
-                </td>
-                <td class="inserimento">
-                <input type="text" id="altezza" placeholder="0">
-                </td>    
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" onclick="calcola()" value="Invia">
-                </td>
-                <td>
-                    <input type="button" onclick="annulla()" value="Annulla">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label>Il tuo BMI è</label>
-                    <input type="text" id="bmi" disabled>
-                </td>
-            </tr>
+              <!-- INIZIO NAVBAR -->
+      <div id="navbar-home">
+        <table class="img_navbar">
+           <tr>
+              <td>
+                 <a href="#calcolatore" class="a_imgnavbar">
+                 <img class="navbar_elements" src="resources/calculator.png" alt="calcolatore">
+                 </a>
+              </td>
+              <td>
+                 <a href="#inizio-pagina">
+                 <img class="home" src="resources/home.png" alt="home">
+                 </a>
+              </td>
+              <td>
+                 <a href="#tabella" class="a_imgnavbar">
+                 <img class="navbar_elements" src="resources/cells.png" alt="tabella">
+                 </a>
+              </td>
+           </tr>
         </table>
-        </form>
+        <div class="progressi">
+                <div class="barra-progressi" id="barra-progressi"></div>
+        </div>
+     </div>
+     <!-- FINE NAVBAR -->
+     <a name="inizio-pagina"></a>
+        <div class="hero">
+                <video autoplay muted loop id="video_back">
+                   <source src="resources/video_back.mp4" type="video/mp4">
+                </video>
+                <div class="hero_content animazione">
+                   <h1 class="testo_grande stroke">L'INCREDIBILE TOOL DI ABBO</h1>
+                   <p class="sottotitolo stroke"> per calcolare se sei obeso</p>
+                   <br>
+                   <a  id="bottone-inizio" href="#calcolatore"> Inizia subito!</a>
+                </div>
+             </div>
 
+        <div class="sezione">
+         
+             <a name="calcolatore"></a>
+             <div class="contenuto" data-aos="zoom-in">
+      
+                <h1>Calcolatore BMI</h1>
+                <form name="bmi">
+                
+                        <table>
+                    <tr>
+                        <td class="etichetta">
+                        <label>Peso individuo (Kg)</label>
+                        </td>
+                        <td class="inserimento">
+                        <input type="text" id="peso" placeholder="0">
+                        </td>
+            
+                    </tr>
+                    <tr>
+                        <td class="etichetta">
+                        <label>Altezza (Cm)</label>
+                        </td>
+                        <td class="inserimento">
+                        <input type="text" id="altezza" placeholder="0">
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="controlli()" value="Invia">
+                        </td>
+                        <td>
+                            <input type="button" onclick="annulla()" value="Annulla">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Il tuo BMI &egrave</label>
+                            <input type="text" id="bmivalue" disabled>
+                        </td>
+                    </tr>
+                </table>
+                </form> 
+                </div> </div>
+   <div class="sezione">
+     <a name="tabella"></a>
+      <div class="tabellabmi" id="tabellabmi" data-aos="zoom-in">
+         <table class="bmitable">
+             <tbody><tr><td bgcolor="#CCCCCC">Categoria</td><td colspan="2" bgcolor="#CCCCCC">IMC</td></tr>
+             <tr><td>&nbsp;</td><td>da</td><td>a</td></tr>
+             
+             <tr><td>Sottopeso molto grave</td><td>&nbsp;</td><td>15</td></tr>
+             <tr><td>Sottopeso grave</td><td>15</td><td>16</td></tr>
+             <tr><td>Sottopeso</td><td>16</td><td>18,5</td></tr>
+             <tr><td>Normale</td><td>18,5</td><td>25</td></tr>
+             <tr><td>Sovrappeso</td><td>25</td><td>30</td></tr>
+             <tr><td>Obeso</td><td>30</td><td>35</td></tr>
+             <tr><td>Sovrappeso grave</td><td>35</td><td>&nbsp;</td></tr>
+             
+             </tbody></table>
+   </div>
+
+
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+  AOS.init();
+ </script>
 </body>
-
 </html>
